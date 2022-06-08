@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
   <script src="./lib/deepClone.js"></script>
   <script src="./lib/compose.js"></script>
 </head>
+
 <body>
   <script>
     // initMyPromiseDemo()
@@ -16,7 +18,17 @@
     initCompose()
   </script>
 
-  <script type="module">
+  <script>
+    function createArr(min = 1, max = 10) {
+      var middle = min, ret = [middle]
+      while (middle < max) {
+        middle++
+        ret.splice(middle - min, 0, middle, middle - 1)
+      }
+      return ret
+    }
+    console.log(createArr(1))
   </script>
 </body>
+
 </html>
