@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BFC示例</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    .bfc1 {
+      overflow: hidden;
+      background-color: green;
+      padding: 30px;
+    }
+
+    .bfc1-box1 {
+      width: 100%;
+      background-color: red;
+      margin-top: 40px;
+    }
+
+    .bfc1-box2 {
+      width: 100%;
+      height:100px;
+      margin-top: 40px;
+      background-color: blue
+    }
+
+    /* bfc相邻元素margin重叠 */
+    .bfc2 {
+      overflow: hidden;
+      background-color: green;
+      padding: 30px;
+    }
+
+    .bfc2-box1 {
+      width: 100%;
+      height:100px;
+      margin-bottom: 30px;
+      background-color: red;
+    }
+
+    .bfc2-box2 {
+      width: 100%;
+      height:100px;
+      margin-top: 40px;
+      background-color: blue
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bfc1">
+    <p>父子margin重叠</p>
+    <div class="bfc1-box1">
+      <div class="bfc1-box2"></div>
+    </div>
+  </div>
+  <br >
+  <div class="bfc2">
+    <p>相邻元素margin重叠</p>
+    <div class="bfc2-box1">
+    </div>
+    <div class="bfc2-box2"></div>
+  </div>
+
+</body>
+
+</html>

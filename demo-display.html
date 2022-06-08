@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display</title>
+
+  <style>
+    .flow-root-main {
+      background: red;
+      display: flow-root;
+    }
+
+    .flow-root-main .d1 {
+      width: 100px;
+      height: 400px;
+      float: left;
+      background: yellow;
+      font-size: larger;
+    }
+
+    .flow-root-main .d2 {
+      width: 150px;
+      height: 50px;
+      background: blue;
+      font-size: larger;
+    }
+
+    .flow-root-main .d3 {
+      width: 150px;
+      height: 50px;
+      background: rgb(11, 221, 29);
+      font-size: larger;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flow-root">
+    <p>flow-root</p>
+    <div class="flow-root-main">
+      <div class="d1">1</div>
+      <div class="d2">2</div>
+      <div class="d3">3</div>
+    </div>
+  </div>
+</body>
+
+</html>
