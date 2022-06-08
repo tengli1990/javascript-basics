@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>性能检测</title>
+  <script>
+    // 不兼容 performance
+    window.pageStartTime = Date.now();
+  </script>
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="style2.css">
+  <script src="xxx.js"></script>
+  <script>
+    window.firstPaint = Date.now();
+    // 白屏时间
+    console.log(window.firstPaint - performance.timing.navigationStart || pageStartTime)
+  </script>
+</head>
+
+<body>
+  <h1>Hello World!</h1>
+</body>
+
+</html>
