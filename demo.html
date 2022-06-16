@@ -8,7 +8,6 @@
   <title>Document</title>
   <script src="./lib/MyPromise.js"></script>
   <script src="./lib/deepClone.js"></script>
-  <script src="./lib/compose.js"></script>
   <script src="./lib/sort.js"></script>
 </head>
 
@@ -16,12 +15,56 @@
   <script>
     // initMyPromiseDemo()
     // initDeepClone()
-    // initCompose()
-    initSort()
+    // initSort()
   </script>
 
   <script>
-   
+
+    // function fn(n, n1 = 1, n2 = 1) { 
+    //   if (n <= 2) {
+    //     return n2
+    //   }
+    //   else {
+    //     return fn(n - 1, n2, n1 + n2);
+
+    //     // 7 1 1
+    //     // 6 1 2
+    //     // 5 2 3
+    //     // 4 3 4
+    //     // 3 5 5
+    //     // 2 8 6
+    //   }
+    // }
+
+    // console.log(fn(50))
+
+    // function async1(){
+    //   new Promise(resolve=>{
+       
+    //     resolve(Promise.resolve())
+        
+    //   }).then(res=>{
+    //     console.log('async3')
+    //   })
+    // }
+
+    // function async2(){
+    //   console.log('async2')
+    // }
+
+    // async1()
+
+    // new Promise(resolve=>{
+    //   resolve()
+    // }).then(res=>{
+    //   console.log('promise1')
+    //   return 
+    // }).then(res=>{
+    //   console.log('promise2')
+    // }).then(res=>{
+    //   console.log('promise3')
+    // })
+
   </script>
 </body>
 
